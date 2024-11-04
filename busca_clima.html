@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Climática</title>
+    <link rel="stylesheet" href="estilo.css">
+    <!--script src="busca_clima.js" defer></script-->
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Consulta Climática</h1>
+    </header>
+
+    
+        <!--img src="logo.jpg" alt="" -->
+        <img src="logo.jpg" alt="Logo do Tempo" id="weather-logo">
+
+    
+    <h1>Escolha a localidade</h1>
+    <label for="estado">Selecione o Estado:</label>
+    <select id="estado">
+        <option value="">Carregando...</option>
+    </select>
+
+    <label for="cidade">Selecione a Cidade:</label>
+    <select id="cidade">
+        <option value="">Selecione um estado primeiro</option>
+    </select>
+    <button id="buscar">Buscar Clima</button>
+
+    <button id="gerar-pdf">Salvar em PDF</button>
+
+    <h2>Dados do Clima</h2>
+    <table id="tabela-clima">
+        <thead>
+            <tr>
+                <th>Horário</th>
+                <th>Condição</th>
+                <th>Temperatura (°C)</th>
+                <th>Sensação (°C)</th>
+                <th>Umidade (%)</th>
+                <th>Vento (Kph)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os dados do clima serão inseridos aqui -->
+        </tbody>
+    </table>
+    <footer>
+        <p>&copy; 2024 Consulta Climática. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
