@@ -125,17 +125,17 @@ function populateWeatherTable(data) {
 function getWeatherImage(condition) {
     switch (condition.toLowerCase()) {
         case 'céu limpo':
-            return 'sol.jpg';  // Caminho da imagem para céu limpo
+            return 'sol.png';  // Caminho da imagem para céu limpo
         case 'nublado':
-            return 'nublado.jpg';  // Caminho da imagem para nublado
+            return 'nublado.png';  // Caminho da imagem para nublado
         case 'chuva fraca':
-            return 'chuva_fraca.jpg';  // Caminho da imagem para chuva fraca
+            return 'chuva_fraca.png';  // Caminho da imagem para chuva fraca
         case 'chuva moderada':
-            return 'chuva_moderada.jpg';  // Caminho da imagem para chuva moderada
+            return 'chuva_moderada.png';  // Caminho da imagem para chuva moderada
         case 'chuva forte':
-            return 'chuva_forte.jpg';  // Caminho da imagem para chuva forte
+            return 'chuva_forte.png';  // Caminho da imagem para chuva forte
         default:
-            return 'logo.jpg';  // Imagem padrão
+            return 'logo.png';  // Imagem padrão
     }
 }
 

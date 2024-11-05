@@ -20,41 +20,14 @@ body {
 /* Ajustes para o conteúdo principal */
 main {
     padding: 20px;
-    max-width: 800px;
     width: 100%;
+    max-width: 800px;
     text-align: center;
-    margin-top: 200px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
 }
-
-/*footer {
-    background-color: #635555;
-    width: 100%;
-    height: 100px;
-    position: absolute;
-    margin-bottom: -100%;
-    color: #ccc;
-    text-align: center;
-
-    padding: auto;
-}*/
-
-/* Header 
-header {
-    background-color: #3498db;
-    color: #fff;
-    width: 100%;
-    padding: 15px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    font-size: 2em;
-    margin: 0;
-}*/
 
 /* Header fixado no topo */
 header {
@@ -67,12 +40,12 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
 }
 
 header h1 {
     color: #fff;
 }
-
 
 /* Footer */
 footer {
@@ -82,8 +55,7 @@ footer {
     padding: 15px 0;
     text-align: center;
     font-size: 0.9em;
-    margin-top: 20px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
 
@@ -92,7 +64,7 @@ footer p {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     color: #34495e;
     margin-bottom: 20px;
 }
@@ -120,13 +92,14 @@ select {
 button {
     padding: 10px 20px;
     margin-top: 20px;
-    margin-right: 10px;
     border: none;
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
     color: #fff;
     transition: background-color 0.3s;
+    width: 100%;
+    max-width: 150px;
 }
 
 #buscar {
@@ -156,7 +129,6 @@ table {
 table thead {
     background-color: #3498db;
     color: #fff;
-    text-align: left;
 }
 
 table th, table td {
@@ -178,10 +150,43 @@ th {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2em;
+    body {
+        padding: 10px;
     }
-    table, select, button {
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    header, footer {
+        padding: 10px 0;
+    }
+
+    select, button {
         width: 100%;
+        max-width: none;
+    }
+
+    table, th, td {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    table, th, td {
+        font-size: 0.8em;
+    }
+
+    select, button {
+        padding: 8px;
+        font-size: 0.9em;
     }
 }
